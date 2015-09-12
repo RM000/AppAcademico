@@ -57,8 +57,6 @@ public class DisciplineDAO extends BaseDAO {
     }
 
     public void listDisciplines(Discipline d) {
-        //List<Discipline> list = new ArrayList<Discipline>();
-        //String columns = new String[]{"_id", "name", "totalPoints", "minimumRequired" };
-        //Cursor cursor = mDb.query(TABLE, columns, null, null, null, null, "name");
+
     }
 }
