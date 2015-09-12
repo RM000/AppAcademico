@@ -2,12 +2,8 @@ package com.app.appacademico.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 
 import com.app.appacademico.model.Discipline;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by rander on 11/09/15.
@@ -40,7 +36,7 @@ public class DisciplineDAO extends BaseDAO {
 
         values.put(NAME, d.getName());
         values.put(TOTAL_POINTS, d.getTotalPoints());
-        values.put(MINIMUM_REQUIRED, d.getMinimumRequired();
+        values.put(MINIMUM_REQUIRED, d.getMinimumRequired());
 
         mDb.insert(TABLE, null, values);
     }
@@ -51,18 +47,16 @@ public class DisciplineDAO extends BaseDAO {
 
         values.put(NAME, d.getName());
         values.put(TOTAL_POINTS, d.getTotalPoints());
-        values.put(MINIMUM_REQUIRED, d.getMinimumRequired();
+        values.put(MINIMUM_REQUIRED, d.getMinimumRequired());
 
         mDb.update(TABLE, values, "_id = ?", new String[]{"" + d.getId()});
     }
 
     public void deleteDiscipline(Discipline d) {
-        mDb.delete(TABLE, "_id = ?", new String[]{"" + d.getId()}, null);
+        mDb.delete(TABLE, "_id ="+ d.getId(), null);
     }
 
     public void listDisciplines(Discipline d) {
-        List<Discipline> list = new ArrayList<Discipline>()
-        String columns = new String[]{"_id", "name", "totalPoints", "minimumRequired" };
-        Cursor cursor = mDb.query(TABLE, columns, null, null, null, null, "name");
+
     }
 }
