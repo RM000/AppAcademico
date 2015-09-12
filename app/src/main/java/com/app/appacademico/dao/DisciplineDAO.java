@@ -53,7 +53,7 @@ public class DisciplineDAO extends BaseDAO {
     }
 
     public void deleteDiscipline(Discipline d) {
-        mDb.delete(TABLE, "_id = ?"+ new String[]{"" + d.getId()}, null);
+        mDb.delete(TABLE, "_id ="+ d.getId(), null);
     }
 
     public void listDisciplines(Discipline d) {
