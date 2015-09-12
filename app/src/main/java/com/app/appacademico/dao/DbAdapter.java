@@ -44,6 +44,7 @@ public class DbAdapter {
             db.execSQL("DROP TABLE IF EXISTS " + DisciplineDAO.TABLE);
             db.execSQL("DROP TABLE IF EXISTS " + TaskDAO.TABLE);
         }
+        
 
         private void createTables(SQLiteDatabase db) {
             db.execSQL(DisciplineDAO.CREATE_TABLE);
