@@ -5,16 +5,7 @@ import android.content.Context;
 
 import com.app.appacademico.model.Discipline;
 
-/**
- * Created by rander on 11/09/15.
- */
 public class DisciplineDAO extends BaseDAO {
-    public DisciplineDAO(Context ctx) {
-        super(ctx);
-    }
-
-    public static final String TAG = "DisciplineDAO";
-
     public static final String TABLE = "discipline";
 
     public static final String ID = "_id";
@@ -29,6 +20,9 @@ public class DisciplineDAO extends BaseDAO {
             + MINIMUM_REQUIRED + " INTEGER"
             + ");";
 
+    public DisciplineDAO(Context ctx) {
+        super(ctx);
+    }
 
     public void newDiscipline(Discipline d) {
 

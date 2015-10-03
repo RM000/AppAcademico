@@ -17,15 +17,30 @@ public class Discipline {
         this.minimumRequired = 0;
     }
 
+    public void setName(String n){
+        this.name = n;
+    }
+
+    public void setTotalPoints(float tp){
+        this.totalPoints = tp;
+    }
+
+    public void setMinimumRequired(float mr){
+        this.minimumRequired = mr;
+    }
+
     public int getId(){
         return id;
     }
+
     public String getName(){
         return name;
     }
+
     public float getTotalPoints(){
         return totalPoints;
     }
+
     public float getMinimumRequired(){
         return minimumRequired;
     }
